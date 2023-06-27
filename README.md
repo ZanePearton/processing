@@ -9,12 +9,17 @@ If you're interested in using Processing, get started at the download page, or r
 ## Dependencies
 
 This project relies on the following JAR files:
+
+a. **Dependency**
+
 - `processing - core.jar`
 - `peasycam.jar`
 - `jogamp-fat.jar`
 - `jogl-all.jar`
 
-Please ensure these dependencies are correctly installed and included in your Java CLASSPATH.
+b. **Java implementation using Vscode**
+
+![image](https://github.com/ZanePearton/processing/assets/87604418/5c6e6319-c6aa-43d2-9607-8dedfd461228)
 
 ## Getting Started
 
