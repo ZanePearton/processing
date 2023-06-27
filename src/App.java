@@ -2,7 +2,7 @@ import java.util.Random;
 
 import processing.core.PApplet;
 
-public class App extends PApplet{
+public class App extends PApplet {
 
     PApplet processing;
     Random random = new Random();
@@ -14,7 +14,7 @@ public class App extends PApplet{
     public int buildingHeight = 200; // z axis
 
     public void settings(){
-        size(screenWidth, screenHeight, P3D);
+        size(screenWidth, screenHeight,P2D);
         mainLoop();
     }
 
