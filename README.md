@@ -1,6 +1,10 @@
 # Processing
 
-Welcome to the Sketch Processor Repository. This repository houses code written in Java for processing sketches.
+Welcome to the Lightweight processing bundle for macos. This repository houses code written in Java for processing.## [processing](https://github.com/processing) 
+
+This repository contains the compiled Java source code for processing,PeasyCam,jogamp-fat,jogl-all
+
+If you're interested in using Processing, get started at the download page, or read more about the project at the home page. There are also several tutorials that provide a helpful introduction. They are complemented by hundreds of examples that are included with the software itself.
 
 ## Dependencies
 
@@ -20,7 +24,7 @@ Please ensure these dependencies are correctly installed and included in your Ja
   ```
 2. **Navigate to the cloned directory**
   ```
-  cd sketch-processor
+  cd processing/main
   ```
 3. **Ensure the dependencies are in your Java CLASSPATH**
 
@@ -36,11 +40,11 @@ After you have cloned the repository and managed the dependencies, you can compi
 
 1. **Compile the Java files**
   ```
-  javac *.java
+  javac App.java
   ```
 2. **Run the application**
    ```
-   java Main
+   java App
    ```
 Note: Replace `Main` with the name of your main class if it's different.
 
