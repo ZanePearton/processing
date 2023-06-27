@@ -1,0 +1,18 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar",
+            "/Users/z.pearton/Documents/GitHub/processing-lib/core/**/*.jar",
+            "src/**/*.jar",
+            "/Users/z.pearton/Documents/GitHub/processing/**/*.jar"
+        ],
+        "exclude": [
+            "/Users/z.pearton/Documents/GitHub/processing-lib/core/library/gluegen-rt.jar",
+            "/Users/z.pearton/Documents/GitHub/processing-lib/core/library/core.jar",
+            "/Users/z.pearton/Documents/GitHub/processing-lib/core/library/jogamp-fat.jar",
+            "/Users/z.pearton/Documents/GitHub/processing-lib/core/library/jogl-all.jar"
+        ]
+    }
+}
