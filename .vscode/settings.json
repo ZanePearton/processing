@@ -9,8 +9,8 @@
             "/Users/z.pearton/Documents/GitHub/processing/**/*.jar"
         ],
         "exclude": [
-            // "/Users/z.pearton/Documents/GitHub/processing-lib/core/library/gluegen-rt.jar",
-            // "/Users/z.pearton/Documents/GitHub/processing-lib/core/library/jogamp-fat.jar"
+            "lib/core.jar",
+            "lib/jogamp-fat.jar"
         ]
     }
 }
