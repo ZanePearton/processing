@@ -1,4 +1,4 @@
-# Sketch Processor
+# Processing
 
 Welcome to the Sketch Processor Repository. This repository houses code written in Java for processing sketches.
 
