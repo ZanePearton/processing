@@ -43,7 +43,6 @@ package main;
 import java.util.ArrayList;
 import peasy.PeasyCam;
 import java.util.Random;
-
 import behaviour.randomWalkerClass;
 import processing.core.PApplet;
 
