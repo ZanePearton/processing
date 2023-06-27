@@ -6,7 +6,7 @@ Welcome to the Sketch Processor Repository. This repository houses code written 
 
 This project relies on the following JAR files:
 - `processing - core.jar`
-- `gluegen-rt.jar`
+- `peasycam.jar`
 - `jogamp-fat.jar`
 - `jogl-all.jar`
 
