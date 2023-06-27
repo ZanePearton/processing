@@ -43,9 +43,9 @@ After you have cloned the repository and managed the dependencies, you can compi
   javac App.java
   ```
 2. **Run the application**
-   ```
-   java App
-   ```
+  ```
+  java App
+  ```
 Note: Replace `Main` with the name of your main class if it's different.
 
 ## Contribution
