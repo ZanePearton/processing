@@ -1,18 +1,49 @@
+# Processing
+
+Welcome to the Sketch Processor Repository. This repository houses code written in Java for processing sketches.
+
+## Dependencies
+
+This project relies on the following JAR files:
+- `processing - core.jar`
+- `gluegen-rt.jar`
+- `jogamp-fat.jar`
+- `jogl-all.jar`
+
+Please ensure these dependencies are correctly installed and included in your Java CLASSPATH.
+
 ## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+1. **Clone the repository**
+  ```
+  git clone https://github.com/yourGithubUsername/processing.git
+  ```
+2. **Navigate to the cloned directory**
+  ```
+  cd sketch-processor
+  ```
+3. **Ensure the dependencies are in your Java CLASSPATH**
 
-## Folder Structure
+   If the dependencies are not in your CLASSPATH, you can add them. Replace `path_to_jar` with the path to the directory containing the jar files and run:
+   ```
+   export CLASSPATH=$CLASSPATH:path_to_jar/core.jar:path_to_jar/gluegen-rt.jar:path_to_jar/jogamp-fat.jar:path_to_jar/jogl-all.jar
+   ```
+  Note: This command is for Unix-like systems. For Windows, use the appropriate command to update the CLASSPATH.
 
-The workspace contains two folders by default, where:
+## How to Run
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+After you have cloned the repository and managed the dependencies, you can compile and run the Java code.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+1. **Compile the Java files**
+  ```
+  javac *.java
+  ```
+2. **Run the application**
+   ```
+   java Main
+   ```
+Note: Replace `Main` with the name of your main class if it's different.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Contribution
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+If you would like to contribute to this project, please fork this repository and propose your changes via a Pull Request. All contributions, big or small, are very much appreciated!
