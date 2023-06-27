@@ -7,7 +7,7 @@ import processing.core.PApplet;
 
 public class App extends PApplet {
     ArrayList<randomWalkerClass> randomWalkers = new ArrayList<randomWalkerClass>();
-    // ArrayList<randomWalkerClass> trail = new ArrayList<randomWalkerClass>();
+    ArrayList<randomWalkerClass> trail = new ArrayList<randomWalkerClass>();
     PApplet processing;
     Random random = new Random();
     int numberOfworkers = 30;
