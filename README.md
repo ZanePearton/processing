@@ -28,10 +28,10 @@ Please ensure these dependencies are correctly installed and included in your Ja
   ```
 3. **Ensure the dependencies are in your Java CLASSPATH**
 
-   If the dependencies are not in your CLASSPATH, you can add them. Replace `path_to_jar` with the path to the directory containing the jar files and run:
-   ```
-   export CLASSPATH=$CLASSPATH:path_to_jar/core.jar:path_to_jar/gluegen-rt.jar:path_to_jar/jogamp-fat.jar:path_to_jar/jogl-all.jar
-   ```
+If the dependencies are not in your CLASSPATH, you can add them. Replace `path_to_jar` with the path to the directory containing the jar files and run:
+  ```
+  export CLASSPATH=$CLASSPATH:path_to_jar/core.jar:path_to_jar/gluegen-rt.jar:path_to_jar/jogamp- fat.jar:path_to_jar/jogl-all.jar
+  ```
   Note: This command is for Unix-like systems. For Windows, use the appropriate command to update the CLASSPATH.
 
 ## How to Run
