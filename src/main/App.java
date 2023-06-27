@@ -58,7 +58,6 @@ public class App extends PApplet {
     public int buildingWidth = 100; // x axis
     public int buildingDepth = 100; // y axis
     public int buildingHeight = 200; // z axis
-
     public void settings(){
         size(screenWidth, screenHeight, P3D);
         // mainLoop();
@@ -74,18 +73,18 @@ public class App extends PApplet {
     //     }
     // }
 
-    // public void setup(){
-    //     background(255);
-    //     cam = new PeasyCam(this, 0, 0, 0, 200);
-    //     colorMode(HSB);
-    // }
+    public void setup(){
+        background(25);
+        cam = new PeasyCam(this, 0, 0, 0, 200);
+        // colorMode(HSB);
+    }
 
-    // public void draw(){
-    //     background(255);
-    //     for (randomWalkerClass rw : randomWalkers) {
-    //         rw.run();
-    //     }
-    // }
+    public void draw(){
+        background(25);
+        // for (randomWalkerClass rw : randomWalkers) {
+        //     rw.run();
+        // }
+    }
 
 
         public static void main(String[] args) {
