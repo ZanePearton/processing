@@ -48,7 +48,6 @@ public class App extends PApplet {
             // System.out.println(randomWalkers.size());
             // System.out.println(randomWalkers.toArray());
         }
-
     }
         public static void main(String[] args) {
         String[] processingArgs = { "test" };

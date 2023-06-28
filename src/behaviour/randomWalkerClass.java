@@ -47,7 +47,6 @@ public class randomWalkerClass {
     }
 
     public void draw() {
-
         processing.strokeWeight(2);
         processing.stroke(x * 3, 256, 256);
         processing.point(x, y, z);
