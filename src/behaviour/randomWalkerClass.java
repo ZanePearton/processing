@@ -5,6 +5,11 @@ import java.util.ArrayList;
 import java.util.Random;
 import vectors.vector3D;
 
+///write
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class randomWalkerClass {
 
     Random random;
@@ -36,12 +41,9 @@ public class randomWalkerClass {
         x += processing.random(-1, 1);
         y += processing.random(-1, 1);
         z += processing.random(-1, 1);
-
         if (x > 0 || x < 0) {
-
             path.add(new vector3D(x, y, z));
         }
-
     }
 
     public void draw() {
@@ -51,11 +53,30 @@ public class randomWalkerClass {
         processing.point(x, y, z);
     }
 
-    // public void updateTrails()
-    // {
-    // // path.add(loc.);
-    // path.add(new vector3D ( loc.x , loc.y , loc.z));
-    // }
+    public void printlocationData(){
+        System.out.println(loc.x + "," + loc.y + "," + loc.z);
+        String outputPath = "output.csv";
+        try {
+
+            FileWriter fileWriter = new FileWriter(outputPath,true);
+            try (BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
+                bufferedWriter.write(loc.x + "," + loc.y + "," + loc.z);
+                bufferedWriter.newLine();
+                // bufferedWriter.close();   
+                // System.out.println("CSV file created successfully."); 
+            }
+
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+    public void updateTrails()
+    {
+    // path.add(loc.);
+    path.add(new vector3D ( loc.x , loc.y , loc.z));
+    }
 
     public void trails() {
         for (int i = 0; i < path.size(); i++) {
@@ -70,7 +91,7 @@ public class randomWalkerClass {
         draw();
         // updateTrails();
         trails();
-
+        printlocationData();
     }
 
 }
