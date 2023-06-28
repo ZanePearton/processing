@@ -13,11 +13,9 @@ public class App extends PApplet {
     // ArrayList<randomWalkerClass> trail = new ArrayList<randomWalkerClass>();
     PApplet processing;
     Random random = new Random();
-    int numberOfworkers = 10;
+    int numberOfworkers = 30;
     PeasyCam cam;
-
     // String outputPath = "output.csv";
-
     public int screenWidth = 1200;
     public int screenHeight = 800;
     public int buildingWidth = 100; // x axis
@@ -27,7 +25,6 @@ public class App extends PApplet {
         size(screenWidth, screenHeight, P3D);
         mainLoop();
     }
-
     public void mainLoop(){
         // Adding a particle to the ArrayList particles
         for (int i = 0; i < numberOfworkers; i++) {
