@@ -25,6 +25,7 @@ public class App extends PApplet {
         size(screenWidth, screenHeight, P3D);
         mainLoop();
     }
+    
     public void mainLoop(){
         // Adding a particle to the ArrayList particles
         for (int i = 0; i < numberOfworkers; i++) {

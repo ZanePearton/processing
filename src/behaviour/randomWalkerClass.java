@@ -88,7 +88,7 @@ public class randomWalkerClass {
         draw();
         // updateTrails();
         trails();
-        printlocationData();
+        // printlocationData();
     }
 
 }
