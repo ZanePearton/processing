@@ -17,10 +17,6 @@ a. **Dependency**
 - `jogamp-fat.jar`
 - `jogl-all.jar`
 
-b. **Java implementation using Vscode**
-
-![image](https://github.com/ZanePearton/processing/assets/87604418/5c6e6319-c6aa-43d2-9607-8dedfd461228)
-
 ## Getting Started
 
 1. **Clone the repository**
