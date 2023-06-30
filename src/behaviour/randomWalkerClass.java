@@ -50,6 +50,9 @@ public class randomWalkerClass {
         processing.strokeWeight(2);
         processing.stroke(x * 3, 256, 256);
         processing.point(x, y, z);
+        processing.text(loc.x + loc.y + loc.z , 200, 200,200 );
+        //write
+
     }
 
     public void printlocationData(){
@@ -63,6 +66,7 @@ public class randomWalkerClass {
                 // bufferedWriter.close();   
                 // System.out.println("CSV file created successfully."); 
             }
+
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

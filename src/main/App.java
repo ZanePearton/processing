@@ -1,9 +1,13 @@
 package main;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import peasy.PeasyCam;
 import java.util.Random;
+
+import javax.swing.JFrame;
+
 import behaviour.randomWalkerClass;
 import processing.core.PApplet;
 import vectors.vector3D;
@@ -21,12 +25,13 @@ public class App extends PApplet {
     public int buildingWidth = 100; // x axis
     public int buildingDepth = 100; // y axis
     public int buildingHeight = 200; // z axis
-    public void settings(){
+
+    public void settings() {
         size(screenWidth, screenHeight, P3D);
         mainLoop();
     }
-    
-    public void mainLoop(){
+
+    public void mainLoop() {
         // Adding a particle to the ArrayList particles
         for (int i = 0; i < numberOfworkers; i++) {
             // Adding a particle to the ArrayList particles
@@ -36,13 +41,13 @@ public class App extends PApplet {
         }
     }
 
-    public void setup(){
+    public void setup() {
         background(25);
         cam = new PeasyCam(this, 0, 0, 0, 200);
         colorMode(HSB);
     }
 
-    public void draw(){
+    public void draw() {
         background(25);
         for (randomWalkerClass rw : randomWalkers) {
             rw.run();
@@ -50,7 +55,9 @@ public class App extends PApplet {
             // System.out.println(randomWalkers.toArray());
         }
     }
-        public static void main(String[] args) {
+
+
+    public static void main(String[] args) {
         String[] processingArgs = { "test" };
         App appMain = new App();
         PApplet.runSketch(processingArgs, appMain);
