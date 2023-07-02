@@ -47,10 +47,13 @@ public class randomWalkerClass {
     }
 
     public void draw() {
+        // text(message.charAt(i),x,height/2);
+        // text(main.randomWalkerClass.loc.x); 
+        
+
         processing.strokeWeight(2);
         processing.stroke(x * 3, 256, 256);
-        processing.point(x, y, z);
-        processing.text(loc.x + loc.y + loc.z , 200, 200,200 );
+        // processing.point(x, y, z);
         //write
 
     }
@@ -75,14 +78,15 @@ public class randomWalkerClass {
 
     public void updateTrails()
     {
-    // path.add(loc.);
-    path.add(new vector3D ( loc.x , loc.y , loc.z));
+        // path.add(loc.);
+        path.add(new vector3D ( loc.x , loc.y , loc.z));
     }
 
     public void trails() {
         for (int i = 0; i < path.size(); i++) {
             vector3D trackpath = (vector3D) path.get(i);
             processing.point(trackpath.x, trackpath.y, trackpath.z);
+            processing.text("test", 0, 0, 0); 
         }
 
     }
