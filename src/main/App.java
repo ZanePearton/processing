@@ -1,29 +1,25 @@
 package main;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 import peasy.PeasyCam;
 import java.util.Random;
-import javax.swing.JFrame;
-
 import behaviour.randomWalkerClass;
 import processing.core.PApplet;
-import vectors.vector3D;
+import behaviour.InteractionHandler;
 
 public class App extends PApplet {
     ArrayList<randomWalkerClass> randomWalkers = new ArrayList<randomWalkerClass>();
-    // ArrayList<randomWalkerClass> trail = new ArrayList<randomWalkerClass>();
+    InteractionHandler interactionHandler = new InteractionHandler();
     PApplet processing;
     Random random = new Random();
-    int numberOfworkers = 1;
+    int numberOfworkers = 300;
     PeasyCam cam;
     // String outputPath = "output.csv";
     public int screenWidth = 1200;
     public int screenHeight = 800;
-    public int buildingWidth = 100; // x axis
-    public int buildingDepth = 100; // y axis
-    public int buildingHeight = 200; // z axis
+    public int buildingWidth = 2200; // x axis
+    public int buildingDepth = 2200; // y axis
+    public int buildingHeight = 2200; // z axis
 
     public void settings() {
         size(screenWidth, screenHeight, P3D);
@@ -47,9 +43,9 @@ public class App extends PApplet {
 
     public void draw() {
         background(25);
+         interactionHandler.handleInteractions(randomWalkers); 
         for (randomWalkerClass rw : randomWalkers) {
             rw.run();
-            
             // System.out.println(randomWalkers.size());
             // System.out.println(randomWalkers.toArray());
         }
