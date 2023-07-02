@@ -46,14 +46,25 @@ public class randomWalkHandler {
         return PApplet.sqrt(dx*dx + dy*dy + dz*dz);
     }
 
-    public void draw() {
-        // text(message.charAt(i),x,height/2);
-        // text(main.randomWalkerClass.loc.x); 
-        processing.strokeWeight(2);
-        processing.stroke(x * 3, 256, 256);
-        // processing.point(x, y, z);
-        //write
+    // public void draw() {
+    //     // text(message.charAt(i),x,height/2);
+    //     // text(main.randomWalkerClass.loc.x); 
+    //     processing.strokeWeight(2);
+    //     processing.stroke(loc.x * 3, 256, 256);
+    //     // processing.point(x, y, z);
+    //     //write
 
+    // }
+
+    public void draw() {
+        float distance = PApplet.sqrt(x * x + y * y + z * z ); // Calculate the distance from the center
+        float hue = PApplet.map(distance, 0, PApplet.sqrt(.2f * (255 * 255)), 0, 255); // Map the distance to the hue range (0-255)
+        float saturation = PApplet.map((x * x + y * y + z * z), -255 / 2, 255 / 2, 0, 255); // Map the x coordinate to the saturation range (0-255)
+        float brightness =  255; // Map the y coordinate to the brightness range (0-255)
+        
+        processing.strokeWeight(2);
+        processing.stroke(hue, saturation, brightness);
+        // processing.point(x, y, z);
     }
 
     public void printlocationData(){
