@@ -3,13 +3,15 @@ package main;
 import java.util.ArrayList;
 import peasy.PeasyCam;
 import java.util.Random;
-import behaviour.randomWalkerClass;
+import behaviour.randomWalkHandler;
 import processing.core.PApplet;
 import behaviour.InteractionHandler;
 
 public class App extends PApplet {
-    ArrayList<randomWalkerClass> randomWalkers = new ArrayList<randomWalkerClass>();
+    
+    ArrayList<randomWalkHandler> randomWalkers = new ArrayList<randomWalkHandler>();
     InteractionHandler interactionHandler = new InteractionHandler();
+
     PApplet processing;
     Random random = new Random();
     int numberOfworkers = 300;
@@ -30,7 +32,7 @@ public class App extends PApplet {
         // Adding a particle to the ArrayList particles
         for (int i = 0; i < numberOfworkers; i++) {
             // Adding a particle to the ArrayList particles
-            randomWalkers.add(new randomWalkerClass(this, random.nextInt(buildingWidth), random.nextInt(buildingDepth), random.nextInt(buildingHeight)));
+            randomWalkers.add(new randomWalkHandler(this, random.nextInt(buildingWidth), random.nextInt(buildingDepth), random.nextInt(buildingHeight)));
             // System.out.println(particle);
         }
     }
@@ -44,7 +46,7 @@ public class App extends PApplet {
     public void draw() {
         background(25);
          interactionHandler.handleInteractions(randomWalkers); 
-        for (randomWalkerClass rw : randomWalkers) {
+        for (randomWalkHandler rw : randomWalkers) {
             rw.run();
             // System.out.println(randomWalkers.size());
             // System.out.println(randomWalkers.toArray());

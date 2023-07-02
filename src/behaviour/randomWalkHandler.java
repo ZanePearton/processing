@@ -11,7 +11,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class randomWalkerClass {
+public class randomWalkHandler {
 
     Random random;
     PApplet processing;
@@ -21,7 +21,7 @@ public class randomWalkerClass {
     public vector3D loc;
     ArrayList<vector3D> path;
 
-    public randomWalkerClass(PApplet processing, float x, float y, float z) {
+    public randomWalkHandler(PApplet processing, float x, float y, float z) {
 
         // constructor data
         this.processing = processing;
@@ -39,7 +39,7 @@ public class randomWalkerClass {
         }
     }
 
-    public float distanceTo(randomWalkerClass other) {
+    public float distanceTo(randomWalkHandler other) {
         float dx = this.x - other.x;
         float dy = this.y - other.y;
         float dz = this.z - other.z;

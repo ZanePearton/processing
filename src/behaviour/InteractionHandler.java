@@ -12,9 +12,9 @@ public class InteractionHandler {
         // Any initializations if needed.
     }
 
-    public void handleInteractions(ArrayList<randomWalkerClass> randomWalkers) {
-        for (randomWalkerClass walker : randomWalkers) {
-            for (randomWalkerClass other : randomWalkers) {
+    public void handleInteractions(ArrayList<randomWalkHandler> randomWalkers) {
+        for (randomWalkHandler walker : randomWalkers) {
+            for (randomWalkHandler other : randomWalkers) {
                 if (other != walker && walker.distanceTo(other) < interactionRadius) {
                     walker.x += (other.x - walker.x) * interactionStrength;
                     walker.y += (other.y - walker.y) * interactionStrength;
