@@ -54,7 +54,7 @@ After setting up the repository and managing the dependencies, follow these step
    From the `src` directory, compile your Java files, specifying the classpath to include the `libs` directory. For example, to compile `App.java` in the `main` package:
 
    ```
-   javac -cp ".:libs/*" main/App.java
+   javac -cp ".:libs/core.jar:libs/peasycam.jar:libs/jogamp-fat.jar:libs/jogl-all.jar:libs/peasy-math.jar" main/App.java
    ```
 
 2. **Run Your Application**
@@ -62,7 +62,7 @@ After setting up the repository and managing the dependencies, follow these step
    Execute your application by specifying the same classpath used for compilation. If `App` is your main class:
 
    ```
-   java -cp ".:libs/*" main.App
+   java -cp ".:libs/core.jar:libs/peasycam.jar:libs/jogamp-fat.jar:libs/jogl-all.jar:libs/peasy-math.jar" main.App
    ```
 
 ## Contribution
