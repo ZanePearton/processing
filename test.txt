@@ -1,3 +1,6 @@
 24.99221 9.49049 13.06404 
 25.99253 9.49049 12.77443 
 25.99253 9.85957 12.66110 
+
+
+export CLASSPATH=$CLASSPATH:libs/core.jar:libs/gluegen-rt.jar:libs/jogamp-fat.jar:libs/jogl-all.jar

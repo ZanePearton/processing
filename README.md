@@ -1,54 +1,70 @@
-# Processing
+# Processing Bundle for macOS
 
-Lightweight processing bundle for macos. This repository houses code written in Java for processing.[processing](https://github.com/processing) 
+This repository is a lightweight Processing bundle tailored for macOS. It contains Java source code utilizing the Processing framework, along with additional libraries like PeasyCam and JOGL (Java OpenGL). Processing is a flexible software sketchbook and a language for learning how to code within the context of the visual arts. For more information on Processing, visit the [official Processing GitHub repository](https://github.com/processing).
 
-This repository contains the compiled Java source code for processing,PeasyCam,jogamp-fat,jogl-all
-
-If you're interested in using Processing, get started at the download page, or read more about the project at the home page. There are also several tutorials that provide a helpful introduction. They are complemented by hundreds of examples that are included with the software itself.
+This setup is designed for those interested in extending the capabilities of Processing with external libraries such as PeasyCam for camera controls and JOGL for advanced OpenGL graphics functionalities.
 
 ## Dependencies
 
-This project relies on the following JAR files:
+The project requires the following external JAR files for compilation and execution:
 
-a. **Dependency**
+- `core.jar` (Processing core library)
+- `peasycam.jar` (Camera library for Processing)
+- `jogamp-fat.jar` (JOGL all-in-one jar)
+- `jogl-all.jar` (Java OpenGL library)
 
-- `processing - core.jar`
-- `peasycam.jar`
-- `jogamp-fat.jar`
-- `jogl-all.jar`
+These dependencies are essential for the project to function and provide a comprehensive environment for developing Processing-based applications.
 
 ## Getting Started
 
-1. **Clone the repository**
-  ```
-  git clone https://github.com/ZanePearton/processing.git
-  ```
-2. **Navigate to the cloned directory**
-  ```
-  cd processing/main
-  ```
-3. **Ensure the dependencies are in your Java CLASSPATH**
+To get started with this Processing bundle:
 
-If the dependencies are not in your CLASSPATH, you can add them. Replace `path_to_jar` with the path to the directory containing the jar files and run:
-  ```
-  export CLASSPATH=$CLASSPATH:path_to_jar/core.jar:path_to_jar/gluegen-rt.jar:path_to_jar/jogamp- fat.jar:path_to_jar/jogl-all.jar
-  ```
-  Note: This command is for Unix-like systems. For Windows, use the appropriate command to update the CLASSPATH.
+1. **Clone the Repository**
 
-## How to Run
+   Clone this repository to your local machine using the following command:
 
-After you have cloned the repository and managed the dependencies, you can compile and run the Java code.
+   ```
+   git clone https://github.com/ZanePearton/processing.git
+   ```
 
-1. **Compile the Java files**
-  ```
-  javac App.java
-  ```
-2. **Run the application**
-  ```
-  java App
-  ```
-Note: Replace `Main` with the name of your main class if it's different.
+2. **Navigate to the Cloned Directory**
+
+   Change into the directory containing the project files:
+
+   ```
+   cd processing/src
+   ```
+
+3. **Manage Dependencies**
+
+   Ensure that all dependencies are included in your Java `CLASSPATH`. If not, you can add them temporarily for your session or permanently by modifying your environment variables. Assuming your dependencies are located in the `libs` directory under `src`, you can set your `CLASSPATH` as follows (Unix-like systems):
+
+   ```
+   export CLASSPATH=$CLASSPATH:./libs/core.jar:./libs/peasycam.jar:./libs/jogamp-fat.jar:./libs/jogl-all.jar
+   ```
+
+   On Windows, you would adjust the `CLASSPATH` through the Environment Variables section in the System Properties.
+
+## How to Compile and Run
+
+After setting up the repository and managing the dependencies, follow these steps to compile and run your application:
+
+1. **Compile Your Java Files**
+
+   From the `src` directory, compile your Java files, specifying the classpath to include the `libs` directory. For example, to compile `App.java` in the `main` package:
+
+   ```
+   javac -cp ".:libs/*" main/App.java
+   ```
+
+2. **Run Your Application**
+
+   Execute your application by specifying the same classpath used for compilation. If `App` is your main class:
+
+   ```
+   java -cp ".:libs/*" main.App
+   ```
 
 ## Contribution
 
-If you would like to contribute to this project, please fork this repository and propose your changes via a Pull Request. All contributions, big or small, are very much appreciated!
+Contributions are welcome! If you're interested in contributing, please fork the repository and submit your changes via a Pull Request. We appreciate contributions of any size and thank you for your interest in enhancing this Processing bundle.
