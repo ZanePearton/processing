@@ -21,7 +21,7 @@ a. **Dependency**
 
 1. **Clone the repository**
   ```
-  git clone https://github.com/yourGithubUsername/processing.git
+  git clone https://github.com/ZanePearton/processing.git
   ```
 2. **Navigate to the cloned directory**
   ```
