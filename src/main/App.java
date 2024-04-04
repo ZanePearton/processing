@@ -1,62 +1,79 @@
 package main;
 
-import java.util.ArrayList;
-import peasy.PeasyCam;
-import java.util.Random;
-import behaviour.randomWalkHandler;
-import processing.core.PApplet;
 import behaviour.InteractionHandler;
+import behaviour.randomWalkHandler;
+import java.util.ArrayList;
+import java.util.Random;
+import peasy.PeasyCam;
+import processing.core.PApplet;
 
 public class App extends PApplet {
     
-    ArrayList<randomWalkHandler> randomWalkers = new ArrayList<randomWalkHandler>();
+    ArrayList<randomWalkHandler> randomWalkers = new ArrayList<>();
     InteractionHandler interactionHandler = new InteractionHandler();
 
-    PApplet processing;
     Random random = new Random();
-    int numberOfworkers = 300;
+    int numberOfWorkers = 2120;
+    int numberOfAttractors = 55; // Number of attractors
     PeasyCam cam;
-    // String outputPath = "output.csv";
+
+    // Environment dimensions
     public int screenWidth = 1200;
     public int screenHeight = 800;
-    public int buildingWidth = 2200; // x axis
-    public int buildingDepth = 2200; // y axis
-    public int buildingHeight = 2200; // z axis
+    public int buildingWidth = 150; // x axis
+    public int buildingDepth = 150; // y axis
+    public int buildingHeight = 150; // z axis
 
+    @Override
     public void settings() {
         size(screenWidth, screenHeight, P3D);
-        mainLoop();
     }
 
-    public void mainLoop() {
-        // Adding a particle to the ArrayList particles
-        for (int i = 0; i < numberOfworkers; i++) {
-            // Adding a particle to the ArrayList particles
-            randomWalkers.add(new randomWalkHandler(this, random.nextInt(buildingWidth), random.nextInt(buildingDepth), random.nextInt(buildingHeight)));
-            // System.out.println(particle);
-        }
-    }
-
+    @Override
     public void setup() {
+        mainLoop();
         background(25);
         cam = new PeasyCam(this, 0, 0, 0, 200);
         colorMode(HSB);
     }
 
+    public void mainLoop() {
+        // Initialize walkers
+        for (int i = 0; i < numberOfWorkers; i++) {
+            randomWalkHandler walker = new randomWalkHandler(
+           
+                (float) random.nextInt(buildingWidth), 
+                (float) random.nextInt(buildingDepth), 
+                (float) random.nextInt(buildingHeight)
+            );
+            randomWalkers.add(walker);
+            interactionHandler.addWalker(walker);
+        }
+        
+        // Initialize attractors
+        for (int i = 0; i < numberOfAttractors; i++) {
+            randomWalkHandler attractor = new randomWalkHandler(
+                
+                (float) random.nextInt(buildingWidth), 
+                (float) random.nextInt(buildingDepth), 
+                (float) random.nextInt(buildingHeight)
+            );
+            // Assuming you want attractors also to be visible or have a role in the environment
+            interactionHandler.addAttractor(attractor);
+        }
+    }
+
+    @Override
     public void draw() {
         background(25);
-         interactionHandler.handleInteractions(randomWalkers); 
+        interactionHandler.handleInteractions(); // Update walkers' positions based on interactions
         for (randomWalkHandler rw : randomWalkers) {
-            rw.run();
-            // System.out.println(randomWalkers.size());
-            // System.out.println(randomWalkers.toArray());
+            rw.draw(this); // Ensure there's a draw method in randomWalkHandler for visualization
         }
     }
 
     public static void main(String[] args) {
-        String[] processingArgs = { "test" };
-        App appMain = new App();
-        PApplet.runSketch(processingArgs, appMain);
+        PApplet.main("main.App");
     }
-
 }
+
