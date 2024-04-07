@@ -14,7 +14,7 @@ public class App extends PApplet {
 
     Random random = new Random();
     int numberOfWorkers = 2120;
-    int numberOfAttractors = 55; // Number of attractors
+    int numberOfAttractors = 0; // Number of attractors
     PeasyCam cam;
 
     // Environment dimensions
@@ -22,7 +22,7 @@ public class App extends PApplet {
     public int screenHeight = 800;
     public int buildingWidth = 150; // x axis
     public int buildingDepth = 150; // y axis
-    public int buildingHeight = 150; // z axis
+    public int buildingHeight = 1; // z axis
 
     @Override
     public void settings() {
